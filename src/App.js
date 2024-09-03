@@ -13,7 +13,12 @@ function App() {
     // </>
 
     <>
-    <Header title="Todo's List"/>
+    {/* Comment in JSX */}
+
+
+    <Header/>
+    {/* <Header title="Todo's List"/> */}
+    {/* <Header title={56}/> */}
     {/* <Header title="Todo's List" tab1="Home" tab2="About"/> */}
     {/* <Header title="Todo's List" search={true} /> */}
     {/* <Header title="Todo's List" search={false} /> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export default function Header(props) {
   return (
@@ -31,4 +32,15 @@ export default function Header(props) {
     </nav>
   </>
   )
+}
+
+Header.defaultProps = {
+  title : "Todo",
+  search: true
+}
+
+Header.propTypes = {
+  title : PropTypes.string,
+  // search : PropTypes.bool
+  search : PropTypes.bool.isRequired
 }
