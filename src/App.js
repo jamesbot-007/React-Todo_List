@@ -13,7 +13,10 @@ function App() {
     // </>
 
     <>
-    <Header/>
+    <Header title="Todo's List"/>
+    {/* <Header title="Todo's List" tab1="Home" tab2="About"/> */}
+    {/* <Header title="Todo's List" search={true} /> */}
+    {/* <Header title="Todo's List" search={false} /> */}
     <Todos/>
     <Footer/>
     </>
