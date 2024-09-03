@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from "./MyComponets/Header"
+import {Footer} from "./MyComponets/Footer"
+import Todos from "./MyComponets/Todos"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Whenever you return something it shold be wrapped inside something 
+    // if there is nothing to wrap then put empty tags like,
+    // <>
+      // Code
+    // </>
+
+    <>
+    <Header/>
+    <Todos/>
+    <Footer/>
+    </>
+
   );
 }
 
