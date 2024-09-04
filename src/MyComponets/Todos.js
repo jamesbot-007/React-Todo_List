@@ -25,8 +25,10 @@ export const Todos = (props) => {
 
 
                 // OR
-                return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
-
+                console.log(todo);
+                // return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
+                
+            return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
             })}
         </div>
     );

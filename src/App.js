@@ -5,24 +5,24 @@ import { Todos } from "./MyComponets/Todos";
 import { Footer } from "./MyComponets/Footer";
 
 function App() {
-    const onDelete = () => {
-        console.log("I am onDelete");
+    const onDelete = (todo) => {
+        console.log("I am onDelete", todo);
     }
 
     let todos = [
         {
             sno: 1,
-            title: "Go to the market",
+            title: "Go to the Market",
             desc: "You need to go to the market to get this job done1. This is your first task",
         },
         {
             sno: 2,
-            title: "Go to the mall",
+            title: "Go to the Mall",
             desc: "You need to go to the market to get this job done2. This is your 2nd task",
         },
         {
             sno: 3,
-            title: "Go to the parking",
+            title: "Go to the Parking",
             desc: "You need to go to the market to get this job done3. This is your 3rd task",
         },
     ];
