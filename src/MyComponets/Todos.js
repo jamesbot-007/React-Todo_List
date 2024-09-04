@@ -19,9 +19,13 @@ export const Todos = (props) => {
                
 
                 //  To avoid warning : each child should have unique prop 
-                return <div key={todo.sno}> 
-                        <TodoItem todo={todo} onDelete={props.onDelete} />
-                    </div>
+                // return <div key={todo.sno}> 
+                //         <TodoItem todo={todo} onDelete={props.onDelete} />
+                //     </div>
+
+
+                // OR
+                return <TodoItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
 
             })}
         </div>

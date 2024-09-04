@@ -1,13 +1,12 @@
 import React from "react";
 
-export const TodoItem = ({ todo }) => {
-    // Take "todo" using destructuring object (Here we can use the "props" but we use {todo} with destucturing for better understanding )
+export const TodoItem = ({ todo, onDelete }) => { // destructure todo, onDelete
     return (
-        <div>
+        <div className="border p-3 mb-2 border-opacity-100">
             <h4>{todo.title}</h4>
-            <p>{todo.desc}</p>
-            <button type="button" class="btn btn-sm btn-danger">
-                Button
+            <p className="mb-2">{todo.desc}</p>
+            <button type="button" className="btn btn-sm btn-danger mb-3" onClick={onDelete}>
+                Delete
             </button>
         </div>
     );
