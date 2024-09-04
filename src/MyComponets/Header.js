@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 
 export default function Header(props) {
+
   return (
     <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -35,13 +36,36 @@ export default function Header(props) {
   )
 }
 
-Header.defaultProps = {
-  title : "Todo",
-  search: true
-}
+// Header.defaultProps = {
+//   title : "Todo",
+//   search: true
+// }
 
 Header.propTypes = {
   title : PropTypes.string,
   // search : PropTypes.bool
   search : PropTypes.bool.isRequired
 }
+
+
+
+/* Update default props */
+
+// ### Old way ###
+// function Header(props) {
+  //   return <h1>{props.title}</h1>;
+  // }
+  
+// Header.defaultProps = {
+  //   title: 'Default Title',
+  // };
+    
+    
+    
+// ### New way ###
+// function Header({ title = 'Default Title' }) {
+//   return <h1>{title}</h1>;
+// }
+
+
+// then remove props. make it props.title --> title
