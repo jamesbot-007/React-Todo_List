@@ -5,8 +5,15 @@ export const AddTodo = (props) => {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     
-    const submit = () =>{
+    const submit = (e) =>{
+        e.preventDefault();
+        if(!title || !desc){
 
+            alert("Title or Description can not be blank");
+        }
+        else{
+            props.addTodo(title,desc)
+        }
     }
    
     return (
@@ -15,11 +22,11 @@ export const AddTodo = (props) => {
             <form onSubmit={submit}>
                 <div className="mb-3">
                     <label for="title" className="form-label">Todo title</label>
-                    <input type="text" value={title} className="form-control" id="title" aria-describedby="emailHelp" />
+                    <input type="text" value={title} className="form-control" onChange={(e)=>{setTitle(e.target.value)}} id="title" aria-describedby="emailHelp" />
                 </div>
                 <div className="mb-3">
                     <label for="desc" className="form-label">Todo Discription</label>
-                    <input type="text" value={desc} className="form-control" id="desc" />
+                    <input type="text" value={desc} className="form-control" onChange={(e)=>{setDesc(e.target.value)}} id="desc" />
                 </div>
               
                 <button type="submit" className="btn  btn-success"> &nbsp;Add&nbsp; </button>

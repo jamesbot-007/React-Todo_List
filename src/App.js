@@ -7,6 +7,11 @@ import React, { useState } from 'react';
 import { AddTodo } from "./MyComponets/AddTodo"
 
 function App() {
+
+    const addTodo = (title, desc) => {
+        console.log("Add Todo", title, desc);
+    }
+
     const onDelete = (todo) => {
         console.log("I am onDelete", todo);
 
@@ -56,7 +61,7 @@ function App() {
             {/* <Header title="Todo's List" search={true} /> */}
             {/* <Header title="Todo's List" search={true} /> */}
 
-            <AddTodo/>
+            <AddTodo addTodo={addTodo}/>
 
             {/* <Todos todo={todos}/> */}
             <Todos todo={todos} onDelete={onDelete}/>
