@@ -2,7 +2,7 @@ import React from "react";
 
 export const TodoItem = ({ todo, onDelete }) => { // destructure todo, onDelete
     return (
-        <div className="border p-3 mb-2 border-opacity-100">
+        <div className="border border-dark rounded p-3 ps-5 mb-3 border-opacity-100 ">
             <h4>{todo.title}</h4>
             <p className="mb-2">{todo.desc}</p>
             {/* <button type="button" className="btn btn-sm btn-danger mb-3" onClick={onDelete}>Delete</button> */}
@@ -17,7 +17,7 @@ export const TodoItem = ({ todo, onDelete }) => { // destructure todo, onDelete
             {/* <button type="button" className="btn btn-sm btn-danger mb-3" onClick= { function () {onDelete(todo)} }>Delete</button> */} 
 
             {/* This way we can call delete for a specific note(i.e. todo) */}
-            {/* When we write a function inside an arrow function that time we're passing a function */}
+            {/* When we write a function inside an arDrow function that time we're passing a function */}
             {/* But via onDelete() we're calling the function. and by this way  { () => {onDelete} } we're passing the function and by this way  { () => {onDelete(todo)} } we're passsing the function with argument in callback, here we're not passing the function remember here we're pass*/}
 
             {/* Make sure you have passed todo as parameter in App.js */}

@@ -3,13 +3,25 @@ import "./App.css";
 import Header from "./MyComponets/Header";
 import { Todos } from "./MyComponets/Todos";
 import { Footer } from "./MyComponets/Footer";
+import React, { useState } from 'react';
+import { AddTodo } from "./MyComponets/AddTodo"
 
 function App() {
     const onDelete = (todo) => {
         console.log("I am onDelete", todo);
+
+        // let index = todos.indexOf(todo);
+        // todos.splice(index, 1);
+
+        // how can i access "todos" inside the onDelete method?
+        setTodos(todos.filter((e) => {
+            return e!==todo;
+        } ))
+
     }
 
-    let todos = [
+    const [todos, setTodos] = useState([
+        // useState is Function and this way we can use useState hook🪝
         {
             sno: 1,
             title: "Go to the Market",
@@ -25,7 +37,7 @@ function App() {
             title: "Go to the Parking",
             desc: "You need to go to the market to get this job done3. This is your 3rd task",
         },
-    ];
+    ]);
 
     return (
         // Whenever you return something it shold be wrapped inside something
@@ -37,14 +49,19 @@ function App() {
         <>
             {/* Comment in JSX */}
 
-            {/* <Header /> */}
+            <Header />
             {/* <Header title="Todo's List"/> */}
             {/* <Header title={56}/> */}
             {/* <Header title="Todo's List" tab1="Home" tab2="About"/> */}
             {/* <Header title="Todo's List" search={true} /> */}
-            {/* <Header title="Todo's List" search={false} /> */}
+            {/* <Header title="Todo's List" search={true} /> */}
+
+            <AddTodo/>
+
             {/* <Todos todo={todos}/> */}
             <Todos todo={todos} onDelete={onDelete}/>
+
+
             <Footer />
         </>
     );
