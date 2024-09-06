@@ -2,7 +2,7 @@ import React from "react";
 
 export const TodoItem = ({ todo, onDelete }) => { // destructure todo, onDelete
     return (
-        <div className="border border-dark rounded p-3 ps-5 mb-3 border-opacity-100 ">
+        <div className="border border-light rounded p-2 ps-3 mb-3 border-opacity-100 ">
             <h4>{todo.title}</h4>
             <p className="mb-2">{todo.desc}</p>
             {/* <button type="button" className="btn btn-sm btn-danger mb-3" onClick={onDelete}>Delete</button> */}
@@ -11,7 +11,7 @@ export const TodoItem = ({ todo, onDelete }) => { // destructure todo, onDelete
             {/* if it is like onDelete={OnDelete()} then you click on only one delete button and it will call OnDelete() for all buttons */}
             {/* solution : we pass arrow function. Arrow function will call only thatt onDelete() on which we clicked because we pass todo as argument to it (These type of thing you will learn as per time goes in React ) */}
 
-            <button type="button" className="btn btn-sm btn-danger mb-3" onClick= { () => {onDelete(todo)} }>Delete</button>
+            <button type="button" className="btn btn-sm btn-danger mb-2" onClick= { () => {onDelete(todo)} }>Delete</button>
             
             {/* It can be a Normal function or can be an Arrow function */}
             {/* <button type="button" className="btn btn-sm btn-danger mb-3" onClick= { function () {onDelete(todo)} }>Delete</button> */} 

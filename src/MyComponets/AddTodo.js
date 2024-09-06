@@ -17,7 +17,7 @@ export const AddTodo = (props) => {
     }
    
     return (
-        <div className="container my-5 ">
+        <div className="container c2 my-5 ">
             <h3 className='mb-3'>Add a Todo</h3>
             <form onSubmit={submit}>
                 <div className="mb-3">
@@ -29,7 +29,7 @@ export const AddTodo = (props) => {
                     <input type="text" value={desc} className="form-control" onChange={(e)=>{setDesc(e.target.value)}} id="desc" />
                 </div>
               
-                <button type="submit" className="btn  btn-success"> &nbsp;Add&nbsp; </button>
+                <button type="submit" className="btn btn-sm btn-success">Add</button>
             </form>
         </div>
     )

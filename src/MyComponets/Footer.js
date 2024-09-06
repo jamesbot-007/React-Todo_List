@@ -1,5 +1,5 @@
 import React from 'react'
-import "./footer.css"
+import "./style.css"
 
 export const Footer = () => {
 
@@ -13,7 +13,7 @@ export const Footer = () => {
   }
 
   return (
-    <footer className='bg-light text-dark' style={footerStyle}>
+    <footer className=' text-light' style={footerStyle}>
       <p className="text-center mb-0">
       Copyright &copy; MyTodosList.com
       </p>
