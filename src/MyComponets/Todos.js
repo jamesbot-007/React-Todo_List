@@ -1,11 +1,12 @@
 import React from "react";
 import { TodoItem } from "./TodoItem";
+import "./style.css";
 
 export const Todos = (props) => {
-    console.log("Todo Array :", props.todo);
+    // console.log("Todo Array :", props.todo);
 
     return (
-        <div className="container ">
+        <div className="container c3">
             <h3 className="my-3">Todo's List</h3>
 
 

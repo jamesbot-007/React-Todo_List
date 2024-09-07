@@ -10,7 +10,13 @@ function App() {
 
     const addTodo = (title, desc) => {
         console.log("Add Todo", title, desc);
-        let sno = todos[todos.length-1].sno + 1;
+
+        // If there is no todo for that we modify it
+        let sno = 1;
+        if(todos[todos.length-1]) {
+            sno = todos[todos.length-1].sno + 1;
+            
+        }
         console.log("sno = ", sno);
         // Last todo's serial no. 
         // index start from 0. Ex : length =3 then last todo have index=2 (because indexes are 0,1,2 ; total 3) 
@@ -22,7 +28,11 @@ function App() {
             title : title,
             desc : desc,
         }
+
+        setTodos([...todos,myTodo]);
         console.log(myTodo);
+
+        
     }
 
     const onDelete = (todo) => {

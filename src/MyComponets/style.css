@@ -26,6 +26,17 @@ footer{
 .container {
     width: 70%;
 }
+.c3 div:last-child{
+    /* color : red !important; */
+    margin-bottom: 50px !important;
+}
+
+
+.c3 div:last-child::after{
+    content : "Latest todo";
+    color : red !important;
+    margin-left: 80% ;
+}
 
 footer{
     font-weight: 500;
