@@ -27,14 +27,13 @@ footer{
     width: 70%;
 }
 .c3 div:last-child{
-    /* color : red !important; */
     margin-bottom: 50px !important;
 }
 
 
 .c3 div:last-child::after{
     content : "Latest todo";
-    color : red !important;
+    color : pink !important;
     margin-left: 80% ;
 }
 
