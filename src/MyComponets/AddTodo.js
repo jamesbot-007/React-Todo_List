@@ -8,7 +8,7 @@ export const AddTodo = (props) => {
     const submit = (e) =>{
         e.preventDefault();
         if(!title || !desc){
-
+            // If there is no title or no desct or not both then todo will not added. and will shown 
             alert("Title or Description can not be blank");
         }
         else{

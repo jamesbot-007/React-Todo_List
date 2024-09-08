@@ -7,6 +7,8 @@ import { AddTodo } from "./MyComponets/AddTodo";
 
 function App() {
 
+    
+
     let initTodo;
     if(localStorage.getItem("todo") === null){
         initTodo = [];
@@ -55,7 +57,15 @@ function App() {
         localStorage.setItem("todos",JSON.stringify(todos));
     };
 
-    const [todos, setTodos] = useState(initTodo);
+
+
+    // here the change is made
+    const [todos, setTodos] = useState( localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : []);
+    // if there is any todos prensent in localStorage then initialize "todos" object with it
+    // else if  Todos list is empty then initialize "todos" object with empty list   ( i.e. []  )
+
+    // U can check this thing by Typing `localStorage.todos` in browser dev-tools cosole. 
+
 
     useEffect(() => {
         localStorage.setItem("todos",JSON.stringify(todos));
