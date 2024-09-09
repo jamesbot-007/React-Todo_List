@@ -13,7 +13,7 @@ A simple and intuitive To-Do List application built with React to help you stay 
 
 ## Demo
 
-Check out the live demo of the app [here](#).
+Check out the live demo of the app [here](https://react-todo-list-two-psi.vercel.app/).
 
 ## Installation
 

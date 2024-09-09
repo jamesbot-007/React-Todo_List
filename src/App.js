@@ -13,13 +13,7 @@ function App() {
 
     
 
-    let initTodo;
-    if(localStorage.getItem("todo") === null){
-        initTodo = [];
-    }
-    else{
-        initTodo = JSON.parse(localStorage.getItem("todos"));
-    }
+
 
 
 
