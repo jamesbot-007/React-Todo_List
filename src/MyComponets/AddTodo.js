@@ -21,7 +21,7 @@ export const AddTodo = (props) => {
     return (
         <div className="container c2 my-5 ">
             <h3 className='mb-3'>Add a Todo</h3>
-            <form onSubmit={submit}>
+            <form onSubmit={submit} autoComplete='off'>
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">Todo title</label>
                     <input type="text" value={title} className="form-control" onChange={(e)=>{setTitle(e.target.value)}} id="title" aria-describedby="emailHelp" />

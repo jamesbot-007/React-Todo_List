@@ -4,6 +4,10 @@ import { Todos } from "./MyComponets/Todos";
 import { Footer } from "./MyComponets/Footer";
 import React, { useState, useEffect } from "react";
 import { AddTodo } from "./MyComponets/AddTodo";
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import {About} from "./MyComponets/About";
+
 
 function App() {
 
@@ -74,13 +78,23 @@ function App() {
     // new updated "todos" will stored in localStorage
 
     return (
-        <>
-            <Header title="My Todos List" searchBar={false} />
-            <AddTodo addTodo={addTodo} />
-            <Todos todo={todos} onDelete={onDelete} />
+        <Router>
+            <Header title="MyTodosList" searchBar={false} />
+
+            <Routes>
+                <Route path="/" element={
+                    <>
+                        <AddTodo addTodo={addTodo} />
+                        <Todos todo={todos} onDelete={onDelete} />
+                    </>
+                } />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<h1 className="text-center d-flex align-items-center justify-content-center">404 Page Not Found</h1>} />
+            </Routes>
+
 
             <Footer />
-        </>
+        </Router>
     );
 }
 
